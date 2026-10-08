@@ -1,0 +1,21 @@
+# Workflow locale
+.workflow-cache/
+
+# Credenziali / segreti
+**/credenziali.*
+**/credentials.*
+**/*password*
+**/*secret*
+**/*token*
+**/*apikey*
+**/*api-key*
+**/*api_key*
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Temporanei
+*.tmp
+*.temp
+*.log
