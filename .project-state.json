@@ -1,10 +1,14 @@
 {
-  "project_type": null,
+  "project_type": "MULTIPAGE",
   "approval": {
     "architecture": null,
     "wireframe": null,
-    "mockup": null,
+    "mockup": "WAITING_FOR_APPROVAL",
     "handoff": null
   },
-  "status": "NOT_STARTED"
+  "status": "MOCKUP_IN_REVIEW",
+  "production_override": {
+    "next_phase": "MOCKUP",
+    "source": "USER"
+  }
 }
