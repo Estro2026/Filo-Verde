@@ -274,7 +274,7 @@ strong{font-weight:600}
 .hero::after{
   content:"";position:absolute;inset:0;z-index:-1;
   background:
-    linear-gradient(180deg,rgba(4,26,21,.72) 0%,rgba(4,26,21,.30) 30%,rgba(4,26,21,.62) 66%,rgb(4,26,21) 100%),
+    linear-gradient(180deg,rgba(4,26,21,.72) 0%,rgba(4,26,21,.30) 30%,rgba(4,26,21,.62) 66%,rgba(4,26,21,.38) 100%),
     linear-gradient(90deg,rgba(4,26,21,.70) 0%,transparent 62%);
 }
 .hero__contenuto{padding-block:var(--spazio-sezione);width:100%}
@@ -319,18 +319,23 @@ strong{font-weight:600}
 /* Dopo la hero: fondo sabbia, card contenute e sfalsate.
    La hero chiude con un angolo a foglia, cosi' il passaggio foto -> foto
    passa da un cambio di fondo e di forma, non da un semplice spazio. */
-.dopo-hero{background:var(--verde-950)}
-.entrypoint{display:grid;grid-template-columns:1fr;gap:2px;background:var(--verde-950)}
+.dopo-hero{background:rgb(18,92,77);background-image:none;
+  /* Il titolo ha mezzo interlinea sopra le maiuscole: si toglie dal padding alto per pareggiare otticamente il basso */
+  padding-top:calc(var(--spazio-sezione) - .6rem)}
+.dopo-hero__titolo{margin-bottom:var(--spazio-blocco);max-width:none}
+.entrypoint{display:grid;grid-template-columns:1fr;gap:var(--gap-griglia)}
 .entrypoint__carta{
   position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-  min-height:clamp(21rem,38vw,30rem);
-  padding:var(--s10) var(--padding-carta) var(--s9);
+  min-height:clamp(20rem,28vw,25rem);
+  padding:var(--s10) var(--padding-carta) var(--s7);
+  border-radius:var(--foglia);
+  transition:border-radius 560ms var(--ease-organico);
   color:#fff;text-decoration:none;overflow:hidden;isolation:isolate;
 }
 .entrypoint__carta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .entrypoint__carta::after{
   content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgb(4,26,21) 0%,rgba(4,26,21,.08) 28%,rgba(4,26,21,.58) 56%,rgba(4,26,21,.92) 100%);
+  background:linear-gradient(180deg,rgba(4,26,21,0) 0%,rgba(4,26,21,0) 36%,rgba(4,26,21,.60) 66%,rgba(4,26,21,.92) 100%);
   transition:background 460ms var(--ease);
 }
 .entrypoint__carta h3{font-size:var(--t-h3);margin-bottom:var(--s4)}
@@ -495,6 +500,13 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
 /* ==========================================================================
    Citazione
    ========================================================================== */
+/* Sfondo fotografico: foto a tutta sezione, velata di verde scuro per la leggibilita' */
+.sezione--citazione{position:relative;isolation:isolate;overflow:hidden;background-image:none;background-color:var(--verde-900)}
+.citazione__sfondo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.sezione--citazione::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(70% 80% at 50% 50%,rgba(4,26,21,.55),transparent 100%),rgba(7,38,31,.80);
+}
 .citazione{max-width:44rem;margin:0 auto;text-align:center}
 .citazione__foglia{width:2.25rem;height:2.25rem;margin:0 auto var(--s7);color:var(--ottone-400)}
 .citazione blockquote{
@@ -682,22 +694,22 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .menu-toggle{
     display:inline-grid;place-items:center;flex:none;
     margin-left:auto;width:3rem;height:3rem;padding:0;
-    background:none;border:1px solid var(--linea-scura);border-radius:var(--foglia);
-    color:#fff;cursor:pointer;
-    transition:border-radius 520ms var(--ease-organico),border-color var(--transizione),color var(--transizione),background var(--transizione);
+    background:none;border:0;border-radius:var(--r-minimo);
+    color:#fff;cursor:pointer;margin-right:-.5rem;
+    transition:color var(--transizione);
   }
-  .menu-toggle[aria-expanded="true"]{border-color:var(--ottone-500);color:var(--ottone-400);border-radius:var(--foglia-inversa)}
+  .menu-toggle[aria-expanded="true"]{color:var(--ottone-400)}
   .menu-icona{width:1.75rem;height:1.75rem;overflow:visible}
   .menu-icona path{
     fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;
     transform-box:fill-box;transform-origin:center;
     transition:transform 440ms var(--ease),opacity 260ms var(--ease);
   }
-  /* Aperto: asta e braccio alto della F si incrociano a formare una X, il braccio medio si ritira.
-     Le traslazioni portano il centro di ogni tratto al centro dell'icona (14,14). */
-  .menu-toggle[aria-expanded="true"] .menu-icona__asta{transform:translate(7px,0) rotate(45deg)}
-  .menu-toggle[aria-expanded="true"] .menu-icona__alto{transform:translate(0,9px) rotate(45deg) scaleX(1.286)}
-  .menu-toggle[aria-expanded="true"] .menu-icona__medio{opacity:0;transform:translateX(-4px) scaleX(.4)}
+  /* Tre linee classiche; aperto: la prima e l'ultima si incrociano a formare una X, quella centrale si ritira.
+     Le traslazioni portano le linee al centro dell'icona (14,14). */
+  .menu-toggle[aria-expanded="true"] .menu-icona__alto{transform:translate(0,6px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] .menu-icona__basso{transform:translate(0,-6px) rotate(-45deg)}
+  .menu-toggle[aria-expanded="true"] .menu-icona__medio{opacity:0;transform:scaleX(.4)}
   .testata__nav{
     display:none;margin-left:0;
     position:absolute;inset-inline:0;top:100%;
@@ -838,7 +850,8 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .testata__logo:hover{opacity:.8}
   .testata__nav a:hover{color:var(--ottone-400)}
   .testata__nav .testata__tel:hover{border-radius:var(--foglia-inversa);background:var(--ottone-500);color:var(--verde-950)}
-  .entrypoint__carta:hover::after{background:linear-gradient(180deg,rgb(4,26,21) 0%,rgba(4,26,21,.22) 28%,rgba(4,26,21,.66) 56%,rgba(7,38,31,.95) 100%)}
+  .entrypoint__carta:hover{border-radius:var(--foglia-inversa)}
+  .entrypoint__carta:hover::after{background:linear-gradient(180deg,rgba(4,26,21,.12) 0%,rgba(4,26,21,.12) 36%,rgba(4,26,21,.68) 66%,rgba(7,38,31,.95) 100%)}
   a.indice__voce:hover .indice__vai{background:var(--ottone-500);border-color:var(--ottone-500);color:var(--verde-950)}
   a.indice__voce:hover{padding-left:var(--s6);background:var(--sabbia)}
   a.indice__voce:hover .indice__anelli{transform:scale(1.12)}
