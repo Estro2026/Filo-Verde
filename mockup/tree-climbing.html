@@ -4,16 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0B3F35">
-<link rel="icon" href="../assets/favicon/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon192.png">
-<link rel="apple-touch-icon" href="../assets/favicon/appletouchicon.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon192.png">
+<link rel="apple-touch-icon" href="assets/favicon/appletouchicon.png">
 <title>Tree climbing | Potatura e abbattimento controllato | Filoverde Srl</title>
 <meta name="description" content="Potatura e abbattimento controllato di alberi ad alto fusto con tecnica di tree climbing: nessun mezzo pesante sul prato, accesso a chiome difficili, smontaggio sezionato con rigging.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Petrona:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -22,7 +21,7 @@
 <header class="testata">
   <div class="contenitore testata__riga">
     <a class="testata__logo" href="index.html" aria-label="Filoverde, torna alla home">
-      <img src="../assets/images/logo/logofiloverdebianco.webp" alt="Filoverde" width="604" height="330">
+      <img src="assets/images/logo/logofiloverdebianco.webp" width="604" height="330" alt="Filoverde">
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principale" aria-label="Apri il menu"><svg class="menu-icona" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path class="menu-icona__alto" d="M5 8h18"/><path class="menu-icona__medio" d="M5 14h18"/><path class="menu-icona__basso" d="M5 20h18"/></svg></button>
     <nav class="testata__nav" id="nav-principale" aria-label="Navigazione principale">
@@ -39,9 +38,11 @@
 
 <main id="contenuto">
 
-  <section class="pagina-testata">
+  <section class="pagina-testata" style="position:relative;isolation:isolate;overflow:hidden">
+    <img src="assets/images/foto/treeclimbing_hero_mare.webp" width="1400" height="900" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2">
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:var(--verde-800);opacity:.82"></div>
     <div class="contenitore" data-reveal>
-      <nav class="briciole" aria-label="Percorso"><a href="index.html">Home</a> &nbsp;/&nbsp; Tree climbing</nav>
+      <nav class="briciole" aria-label="Percorso">Tree climbing</nav>
       <h1>Tree climbing: si sale sull&rsquo;albero quando il mezzo non pu&ograve; arrivarci</h1>
       <p>Abbattimento e potatura di alberi ad alto fusto con accesso e posizionamento mediante funi.</p>
     </div>
@@ -87,7 +88,7 @@
       </div>
       <div class="griglia scaglionato">
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/treeclimbingchiomaalta01.webp" srcset="../assets/images/foto/w640/treeclimbingchiomaalta01.webp 640w, ../assets/images/foto/w1024/treeclimbingchiomaalta01.webp 1024w, ../assets/images/foto/treeclimbingchiomaalta01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Operatore su fune nella chioma alta di un albero" width="1800" height="2400" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/potatura_consolidamento_altofusto.webp" width="1400" height="933" alt="Arboricoltore tra le grandi branche di un cedro, assicurato alle funi" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="potatura-consolidamento.html">Potatura e consolidamento alberature ad alto fusto</a></h3>
             <p>Una potatura ben eseguita ha l’obiettivo di preservare la forma naturale della pianta, salvaguardandone la salute e andando a ridurre al minimo gli interventi invasivi.</p>
@@ -95,7 +96,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/abbattimentocontrollato01.webp" srcset="../assets/images/foto/w640/abbattimentocontrollato01.webp 640w, ../assets/images/foto/w1024/abbattimentocontrollato01.webp 1024w, ../assets/images/foto/abbattimentocontrollato01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Fusto di un albero sezionato e calato a terra con funi durante un abbattimento controllato" width="1800" height="2400" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/abbattimento_controllato_hero.webp" width="1500" height="1000" alt="Due arboricoltori sezionano il fusto di un grande albero imbragato alla gru" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="abbattimento-controllato.html">Abbattimento controllato</a></h3>
             <p>L’abbattimento controllato permette di smontare l’albero in sezioni gestibili, riducendo al minimo il rischio di danni.</p>
@@ -103,7 +104,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/fresaturaceppaia01.webp" srcset="../assets/images/foto/w640/fresaturaceppaia01.webp 640w, ../assets/images/foto/fresaturaceppaia01.webp 900w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Fresa per ceppaie al lavoro su un ceppo residuo" width="900" height="1600" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/ceppaie.webp" width="1500" height="1000" alt="Operatore con casco e visiera mentre taglia una ceppaia con la motosega" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="fresatura-ceppaie.html">Fresatura ceppaie</a></h3>
             <p>La fresatura dei ceppi è un intervento specialistico che permette di rimuovere in modo efficace e sicuro le ceppaie degli alberi abbattuti.</p>
@@ -165,17 +166,39 @@
       <div class="intro" data-reveal>
         <p class="etichetta">Interventi recenti</p>
         <h2>Le nostre realizzazioni</h2>
-        <p class="campo__aiuto">Selezione provvisoria dalle immagini del sito attuale. In attesa del materiale fotografico definitivo del cliente.</p>
       </div>
-      <div class="galleria galleria--f scaglionato">
-        <figure><img src="../assets/images/foto/treeclimbingpinomare01.webp" srcset="../assets/images/foto/w640/treeclimbingpinomare01.webp 640w, ../assets/images/foto/w1024/treeclimbingpinomare01.webp 1024w, ../assets/images/foto/treeclimbingpinomare01.webp 1373w" sizes="(min-width:48em) 45vw, 65vw" alt="Arboricoltore in tree climbing su un pino, con il mare sullo sfondo" width="1373" height="720" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/treeclimbingchiomaalta01.webp" srcset="../assets/images/foto/w640/treeclimbingchiomaalta01.webp 640w, ../assets/images/foto/w1024/treeclimbingchiomaalta01.webp 1024w, ../assets/images/foto/treeclimbingchiomaalta01.webp 1800w" sizes="(min-width:48em) 45vw, 65vw" alt="Operatore posizionato su fune nella chioma alta di un albero" width="1800" height="2400" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/treeclimbingpinomare02.webp" alt="Potatura di un pino a picco sulla costa" width="720" height="1600" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/troncochiomadalbasso01.webp" srcset="../assets/images/foto/w640/troncochiomadalbasso01.webp 640w, ../assets/images/foto/w1024/troncochiomadalbasso01.webp 1024w, ../assets/images/foto/troncochiomadalbasso01.webp 1800w" sizes="(min-width:48em) 45vw, 65vw" alt="Fusto di un grande albero visto dal basso verso la chioma" width="1800" height="2400" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/chiomacontrolucetramonto01.webp" srcset="../assets/images/foto/w640/chiomacontrolucetramonto01.webp 640w, ../assets/images/foto/w1024/chiomacontrolucetramonto01.webp 1024w, ../assets/images/foto/chiomacontrolucetramonto01.webp 2000w" sizes="(min-width:48em) 45vw, 65vw" alt="Rami di cedro in controluce al tramonto" width="2000" height="1126" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/alberoaltofustoparco01.webp" srcset="../assets/images/foto/w640/alberoaltofustoparco01.webp 640w, ../assets/images/foto/alberoaltofustoparco01.webp 1200w" sizes="(min-width:48em) 45vw, 65vw" alt="Grande albero isolato in un parco" width="1200" height="1600" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/potaturaaltofusto01.webp" srcset="../assets/images/foto/w640/potaturaaltofusto01.webp 640w, ../assets/images/foto/potaturaaltofusto01.webp 1200w" sizes="(min-width:48em) 45vw, 65vw" alt="Operatori durante la potatura di una grande quercia" width="1200" height="1600" loading="lazy"></figure>
-        <figure><img src="../assets/images/foto/treeclimbingabbattimento01.webp" srcset="../assets/images/foto/w640/treeclimbingabbattimento01.webp 640w, ../assets/images/foto/treeclimbingabbattimento01.webp 1006w" sizes="(min-width:48em) 45vw, 65vw" alt="Arboricoltore sul fusto di un albero, con il lago e il campanile sullo sfondo" width="1006" height="1130" loading="lazy"></figure>
+      </div>
+    <div class="contenitore">
+      <div class="galleria-fascia" data-reveal style="padding-inline:0">
+        <div class="galleria-fascia__riga">
+          <figure style="--r:3/2;--g:1.5"><img src="assets/images/foto/gallery_treeclimbing_3.webp" width="1400" height="933" alt="Arboricoltore in tree climbing sul fusto di un pino, visto dal basso" loading="lazy"></figure>
+          <figure style="--r:1/1;--g:1"><img src="assets/images/foto/gallery_abbattimentoalberi_8.webp" width="1000" height="1000" alt="Sezione di un grande tronco appena tagliato" loading="lazy"></figure>
+          <figure style="--r:4/5;--g:.8"><video src="assets/video/treeclimbing_gallery_1.mp4" poster="assets/video/treeclimbing_gallery_1_poster.webp" autoplay muted loop playsinline preload="metadata" data-autoplay aria-label="Arboricoltore in tree climbing nella chioma" style="width:100%;height:100%;object-fit:cover;display:block"></video></figure>
+        </div>
+        <div class="galleria-fascia__riga">
+          <figure style="--r:1/1;--g:1"><img src="assets/images/foto/gallery_abbattimentoalberi_1.webp" width="1000" height="1000" alt="Arboricoltore in tree climbing seziona il fusto di un albero imbragato alla gru" loading="lazy"></figure>
+          <figure style="--r:3/2;--g:1.5"><img src="assets/images/foto/gallery_treeclimbing_4.webp" width="1100" height="733" alt="Arboricoltore in tree climbing tra i rami di un grande cedro" loading="lazy"></figure>
+          <figure style="--r:16/9;--g:1.778"><img src="assets/images/foto/gallery_treeclimbing_5.webp" width="1100" height="619" alt="Chiome autunnali viste dal basso contro il cielo" loading="lazy"></figure>
+        </div>
+        <div class="galleria-fascia__riga">
+          <figure style="--r:16/9;--g:1.778"><img src="assets/images/foto/gallery_abbattimentoalberi_3.webp" width="1400" height="788" alt="Cantiere di abbattimento in un parco privato con tronchi a terra" loading="lazy"></figure>
+          <figure style="--r:1/1;--g:1"><img src="assets/images/foto/gallery_abbattimentoalberi_2.webp" width="1000" height="1000" alt="Operatore libera il colletto di un grande albero con la lancia ad aria" loading="lazy"></figure>
+          <figure style="--r:5/4;--g:1.25"><img src="assets/images/foto/gallery_abbattimentoalberi_5.webp" width="1350" height="1080" alt="Sezione di tronco sollevata dalla gru sopra un giardino" loading="lazy"></figure>
+        </div>
+        <div class="galleria-fascia__riga">
+          <figure style="--r:4/5;--g:.8"><video src="assets/video/treeclimbing_gallery_2.mp4" poster="assets/video/treeclimbing_gallery_2_poster.webp" autoplay muted loop playsinline preload="metadata" data-autoplay aria-label="Arboricoltore al lavoro in tree climbing" style="width:100%;height:100%;object-fit:cover;display:block"></video></figure>
+          <figure style="--r:1/1;--g:1"><img src="assets/images/foto/gallery_treeclimbing_1.webp" width="1000" height="1000" alt="Arboricoltore nella chioma di una quercia affacciata sul lago" loading="lazy"></figure>
+          <figure style="--r:5/4;--g:1.25"><img src="assets/images/foto/gallery_abbattimentoalberi_6.webp" width="1100" height="880" alt="Albero sradicato dal vento caduto davanti a una villa" loading="lazy"></figure>
+        </div>
+        <div class="galleria-fascia__riga">
+          <figure style="--r:16/9;--g:1.778"><img src="assets/images/foto/gallery_abbattimentoalberi_7.webp" width="1100" height="619" alt="Miniescavatore e tronchi sezionati dopo un abbattimento" loading="lazy"></figure>
+          <figure style="--r:3/4;--g:.75"><img src="assets/images/foto/gallery_abbattimentoalberi_9.webp" width="1050" height="1400" alt="Grande tronco sollevato dalla gru sopra una strada chiusa al traffico" loading="lazy"></figure>
+          <figure style="--r:3/4;--g:.75"><video src="assets/video/treeclimbing_gallery_3.mp4" poster="assets/video/treeclimbing_gallery_3_poster.webp" autoplay muted loop playsinline preload="metadata" data-autoplay aria-label="Intervento di tree climbing su un albero ad alto fusto" style="width:100%;height:100%;object-fit:cover;display:block"></video></figure>
+        </div>
+        <div class="galleria-fascia__riga">
+          <figure style="--r:27/20;--g:1.35"><img src="assets/images/foto/gallery_treeclimbing_2.webp" width="1350" height="1000" alt="Arboricoltore in tree climbing su un pino affacciato sul mare" loading="lazy"></figure>
+          <figure style="--r:1/1;--g:1"><img src="assets/images/foto/gallery_abbattimentoalberi_4.webp" width="1000" height="1000" alt="Arboricoltore con motosega alla base di un albero, con la gru sullo sfondo" loading="lazy"></figure>
+        </div>
       </div>
     </div>
   </section>
@@ -199,7 +222,7 @@
   <div class="contenitore">
     <div class="pie__griglia">
       <div>
-        <img class="pie__logo" src="../assets/images/logo/logofiloverdebianco.webp" alt="Filoverde" width="604" height="330" loading="lazy">
+        <img class="pie__logo" src="assets/images/logo/logofiloverdebianco.webp" width="604" height="330" alt="Filoverde" loading="lazy">
         <p>Filoverde s.r.l. Manutenzione ordinaria e straordinaria di aree verdi pubbliche e private, con focus su alberature ad alto fusto.</p>
       </div>
       <div>

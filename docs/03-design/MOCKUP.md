@@ -1,5 +1,7 @@
 # Mockup — Filo Verde
 
+> **Aggiornamento 2026-10-27 (CLIENTE/utente):** `mockup/` è stato sostituito con il pacchetto `FILOVERDE.zip` (13 pagine, asset autonomi in `mockup/assets/`, vedi `mockup/README.md`). Il resto di questo documento descrive la versione precedente, ora superata; la versione precedente è recuperabile dal commit `c6a8fe3`.
+
 **Stato:** `WAITING_FOR_APPROVAL`
 **Data:** 2026-10-08
 **File:** `mockup/` (5 pagine HTML + `mockup/assets/css/style.css` + `mockup/assets/js/nav.js`)

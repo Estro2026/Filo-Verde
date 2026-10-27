@@ -4,16 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0B3F35">
-<link rel="icon" href="../assets/favicon/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon192.png">
-<link rel="apple-touch-icon" href="../assets/favicon/appletouchicon.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon192.png">
+<link rel="apple-touch-icon" href="assets/favicon/appletouchicon.png">
 <title>Servizi | Manutenzione aree verdi e cura degli alberi | Filoverde Srl</title>
 <meta name="description" content="Manutenzione ordinaria e straordinaria di aree verdi, monitoraggio fitosanitario, messa a dimora, nuovi impianti e progettazione del verde per aziende, enti pubblici, condomini e privati.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Petrona:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -22,7 +21,7 @@
 <header class="testata">
   <div class="contenitore testata__riga">
     <a class="testata__logo" href="index.html" aria-label="Filoverde, torna alla home">
-      <img src="../assets/images/logo/logofiloverdebianco.webp" alt="Filoverde" width="604" height="330">
+      <img src="assets/images/logo/logofiloverdebianco.webp" width="604" height="330" alt="Filoverde">
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principale" aria-label="Apri il menu"><svg class="menu-icona" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path class="menu-icona__alto" d="M5 8h18"/><path class="menu-icona__medio" d="M5 14h18"/><path class="menu-icona__basso" d="M5 20h18"/></svg></button>
     <nav class="testata__nav" id="nav-principale" aria-label="Navigazione principale">
@@ -39,9 +38,11 @@
 
 <main id="contenuto">
 
-  <section class="pagina-testata">
+  <section class="pagina-testata" style="position:relative;isolation:isolate;overflow:hidden">
+    <img src="assets/images/foto/servizi_hero.webp" width="1400" height="933" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2">
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;background:var(--verde-800);opacity:.82"></div>
     <div class="contenitore" data-reveal>
-      <nav class="briciole" aria-label="Percorso"><a href="index.html">Home</a> &nbsp;/&nbsp; Servizi</nav>
+      <nav class="briciole" aria-label="Percorso">Servizi</nav>
       <h1>I nostri servizi</h1>
       <p>Gestiamo tutte le fasi del ciclo vitale delle piante e la manutenzione dell&rsquo;area verde che le ospita.</p>
     </div>
@@ -88,7 +89,7 @@
       </div>
       <div class="griglia griglia--quattro scaglionato">
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/treeclimbingabbattimento01.webp" srcset="../assets/images/foto/w640/treeclimbingabbattimento01.webp 640w, ../assets/images/foto/treeclimbingabbattimento01.webp 1006w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Arboricoltore in tree climbing sul fusto di un albero ad alto fusto" width="1006" height="1130" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/treeclimbing_hero_mare.webp" width="1400" height="900" alt="Arboricoltore in tree climbing sulla chioma di un pino, con il mare sullo sfondo" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="tree-climbing.html">Abbattimento e potatura alberi con tecnica Tree Climbing</a></h3>
             <p>Il treeclimbing è una tecnica professionale di arrampicata sugli alberi utilizzata per la potatura, la manutenzione e la cura di esemplari di grandi dimensioni.</p>
@@ -96,7 +97,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/abbattimentocontrollato01.webp" srcset="../assets/images/foto/w640/abbattimentocontrollato01.webp 640w, ../assets/images/foto/w1024/abbattimentocontrollato01.webp 1024w, ../assets/images/foto/abbattimentocontrollato01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Fusto di un albero sezionato e calato a terra con funi durante un abbattimento controllato" width="1800" height="2400" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/abbattimento_controllato_hero.webp" width="1500" height="1000" alt="Due arboricoltori sezionano il fusto di un grande albero imbragato alla gru" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="abbattimento-controllato.html">Abbattimento controllato</a></h3>
             <p>L’abbattimento controllato permette di smontare l’albero in sezioni gestibili, riducendo al minimo il rischio di danni.</p>
@@ -104,7 +105,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/fresaturaceppaia01.webp" srcset="../assets/images/foto/w640/fresaturaceppaia01.webp 640w, ../assets/images/foto/fresaturaceppaia01.webp 900w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Fresa per ceppaie al lavoro su un ceppo residuo" width="900" height="1600" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/ceppaie.webp" width="1500" height="1000" alt="Operatore con casco e visiera mentre taglia una ceppaia con la motosega" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="fresatura-ceppaie.html">Fresatura ceppaie</a></h3>
             <p>La fresatura dei ceppi è un intervento specialistico che permette di rimuovere in modo efficace e sicuro le ceppaie degli alberi abbattuti.</p>
@@ -112,7 +113,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/treeclimbingchiomaalta01.webp" srcset="../assets/images/foto/w640/treeclimbingchiomaalta01.webp 640w, ../assets/images/foto/w1024/treeclimbingchiomaalta01.webp 1024w, ../assets/images/foto/treeclimbingchiomaalta01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Operatore su fune nella chioma alta di un albero" width="1800" height="2400" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/potatura_consolidamento_altofusto.webp" width="1400" height="933" alt="Arboricoltore tra le grandi branche di un cedro, assicurato alle funi" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="potatura-consolidamento.html">Potatura e consolidamento alberature ad alto fusto</a></h3>
             <p>Una potatura ben eseguita ha l’obiettivo di preservare la forma naturale della pianta, salvaguardandone la salute e andando a ridurre al minimo gli interventi invasivi.</p>
@@ -133,7 +134,7 @@
       </div>
       <div class="griglia griglia--quattro scaglionato">
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/progettazioneverdeaiuola01.webp" srcset="../assets/images/foto/w640/progettazioneverdeaiuola01.webp 640w, ../assets/images/foto/w1024/progettazioneverdeaiuola01.webp 1024w, ../assets/images/foto/progettazioneverdeaiuola01.webp 2000w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Aiuola contemporanea con graminacee e acero in un contesto architettonico" width="2000" height="1500" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/progettazione_giardini_hero.webp" width="1400" height="933" alt="Aiuola appena realizzata con graminacee e bordura in pietra attorno a un pino" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="progettazione-giardini.html">Progettazione e realizzazione giardini</a></h3>
             <p>Il nostro servizio di costruzione giardini nasce con l’obiettivo di trasformare ogni spazio esterno in un progetto su misura, pensato per rispondere alle vostre esigenze estetiche, funzionali ed ecologiche.</p>
@@ -141,7 +142,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/giardinopratomanutenzione01.webp" srcset="../assets/images/foto/w640/giardinopratomanutenzione01.webp 640w, ../assets/images/foto/w1024/giardinopratomanutenzione01.webp 1024w, ../assets/images/foto/giardinopratomanutenzione01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Prato curato in un giardino privato con alberature mature" width="1800" height="1350" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/manutenzione_areeverdi_hero.webp" width="1400" height="933" alt="Ampio prato curato tra alberature mature e arbusti fioriti" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="manutenzione-aree-verdi.html">Manutenzione ordinaria e straordinaria di aree verdi</a></h3>
             <p>Una manutenzione attenta e regolare è fondamentale per preservare nel tempo l’equilibrio, la bellezza e la funzionalità del progetto originario del giardino.</p>
@@ -149,7 +150,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/messaadimoraimpianto01.webp" srcset="../assets/images/foto/w640/messaadimoraimpianto01.webp 640w, ../assets/images/foto/w1024/messaadimoraimpianto01.webp 1024w, ../assets/images/foto/messaadimoraimpianto01.webp 1800w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Nuovo impianto di arbusti e graminacee lungo un vialetto in ghiaia" width="1800" height="1350" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/irrigazione.webp" width="1400" height="933" alt="Tubo dell'impianto di irrigazione posato lungo un'aiuola in preparazione" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="impianti-irrigazione.html">Installazione e manutenzione impianti di irrigazione</a></h3>
             <p>Un sistema di irrigazione ben progettato è essenziale per garantire la salute e la crescita equilibrata di qualsiasi spazio verde, ottimizzando l’uso dell’acqua e riducendo gli sprechi.</p>
@@ -157,7 +158,7 @@
           </div>
         </article>
         <article class="scheda">
-          <div class="scheda__media"><img src="../assets/images/foto/giardinoolivoaiuola01.webp" srcset="../assets/images/foto/w640/giardinoolivoaiuola01.webp 640w, ../assets/images/foto/giardinoolivoaiuola01.webp 1200w" sizes="(min-width:64em) 300px, (min-width:40em) 50vw, 100vw" alt="Olivo e aiuola mediterranea a ridosso di un muro bianco" width="1200" height="1600" loading="lazy"></div>
+          <div class="scheda__media"><img src="assets/images/foto/trattamentifitosanitari.webp" width="1500" height="1000" alt="Olivo e aiuola mediterranea a ridosso di un muro bianco" loading="lazy"></div>
           <div class="scheda__corpo">
             <h3><a class="scheda__titolo" href="trattamenti-fitosanitari.html">Trattamenti fitosanitari e cura delle piante</a></h3>
             <p>Per le piante meno vigorose offriamo interventi mirati di cura, trattamenti fitosanitari e concimazione, nel pieno rispetto dell’ambiente e della normativa vigente.</p>
@@ -192,7 +193,7 @@
         <h2>Contattaci per richiedere un preventivo</h2>
         <p>Pi&ugrave; dettagli ci dai (tipo di pianta, altezza indicativa, accessi disponibili, foto), pi&ugrave; il preventivo sar&agrave; preciso.</p>
       </div>
-      <form class="form" data-reveal action="#" method="post" novalidate>
+      <form class="form" data-reveal action="grazie.html" method="post" novalidate data-form-contatto>
         <div class="campo">
           <label for="nome">Nome <span class="richiesto" aria-hidden="true">*</span></label>
           <input id="nome" name="nome" type="text" autocomplete="given-name" required>
@@ -241,7 +242,7 @@
   <div class="contenitore">
     <div class="pie__griglia">
       <div>
-        <img class="pie__logo" src="../assets/images/logo/logofiloverdebianco.webp" alt="Filoverde" width="604" height="330" loading="lazy">
+        <img class="pie__logo" src="assets/images/logo/logofiloverdebianco.webp" width="604" height="330" alt="Filoverde" loading="lazy">
         <p>Filoverde s.r.l. Manutenzione ordinaria e straordinaria di aree verdi pubbliche e private, con focus su alberature ad alto fusto.</p>
       </div>
       <div>

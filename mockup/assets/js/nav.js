@@ -76,3 +76,36 @@
     }
   });
 })();
+
+// Modulo contatti: validazione nativa e reindirizzamento alla pagina di ringraziamento.
+// Versione statica: i dati NON vengono inviati. In WordPress il plugin del modulo
+// sostituisce questo blocco (impostare il redirect su grazie / pagina "Grazie").
+(function () {
+  var moduli = document.querySelectorAll('[data-form-contatto]');
+  Array.prototype.forEach.call(moduli, function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add('form--verificato');
+        form.reportValidity();
+        return;
+      }
+      window.location.href = form.getAttribute('action') || 'grazie.html';
+    });
+  });
+})();
+
+// Video della galleria: autoplay come prima; si mettono in pausa fuori schermo
+// e ripartono quando tornano visibili (risparmio batteria e dati).
+(function () {
+  var video = document.querySelectorAll('video[data-autoplay]');
+  if (!video.length || !('IntersectionObserver' in window)) return;
+  var oss = new IntersectionObserver(function (voci) {
+    voci.forEach(function (voce) {
+      var v = voce.target;
+      if (voce.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: 0.1 });
+  Array.prototype.forEach.call(video, function (v) { oss.observe(v); });
+})();

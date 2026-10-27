@@ -277,7 +277,7 @@ strong{font-weight:600}
     linear-gradient(180deg,rgba(4,26,21,.72) 0%,rgba(4,26,21,.30) 30%,rgba(4,26,21,.62) 66%,rgba(4,26,21,.38) 100%),
     linear-gradient(90deg,rgba(4,26,21,.70) 0%,transparent 62%);
 }
-.hero__contenuto{padding-block:var(--spazio-sezione);width:100%}
+.hero__contenuto{padding-block:var(--spazio-sezione);width:100%;max-width:calc(var(--max) + 14rem)}
 .hero h1{max-width:16ch;margin-bottom:var(--s6);text-shadow:0 2px 24px rgba(4,26,21,.45)}
 .hero__sottotitolo{
   color:var(--verde-200);font-size:var(--t-lead);line-height:var(--interlinea-media);
@@ -326,8 +326,8 @@ strong{font-weight:600}
 .entrypoint{display:grid;grid-template-columns:1fr;gap:var(--gap-griglia)}
 .entrypoint__carta{
   position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-  min-height:clamp(20rem,28vw,25rem);
-  padding:var(--s10) var(--padding-carta) var(--s7);
+  min-height:clamp(24rem,34vw,31rem);
+  padding:var(--s10) var(--padding-carta) var(--s5);
   border-radius:var(--foglia);
   transition:border-radius 560ms var(--ease-organico);
   color:#fff;text-decoration:none;overflow:hidden;isolation:isolate;
@@ -335,11 +335,11 @@ strong{font-weight:600}
 .entrypoint__carta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .entrypoint__carta::after{
   content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(4,26,21,0) 0%,rgba(4,26,21,0) 30%,rgba(4,26,21,.45) 55%,rgba(4,26,21,.74) 80%,rgba(4,26,21,.82) 100%);
+  background:linear-gradient(180deg,rgba(4,26,21,0) 0%,rgba(4,26,21,0) 40%,rgba(4,26,21,.35) 62%,rgba(4,26,21,.62) 82%,rgba(4,26,21,.75) 100%);
   transition:background 460ms var(--ease);
 }
 .entrypoint__carta h3{font-size:var(--t-h3);margin-bottom:var(--s4);text-shadow:0 1px 14px rgba(4,26,21,.6)}
-.entrypoint__carta p{color:var(--verde-050);text-shadow:0 1px 10px rgba(4,26,21,.55);margin-bottom:var(--s6);max-width:26rem}
+.entrypoint__carta p{color:#fff;text-shadow:0 1px 10px rgba(4,26,21,.7);margin-bottom:var(--s8);max-width:26rem;text-wrap:pretty}
 
 /* ==========================================================================
    Corda verticale con nodi - unico punto in cui compare la corda
@@ -507,13 +507,13 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   content:"";position:absolute;inset:0;z-index:-1;
   background:rgba(7,38,31,.88);
 }
-.citazione{max-width:44rem;margin:0 auto;text-align:center}
+.citazione{max-width:60rem;margin:0 auto;text-align:center}
 .citazione__foglia{width:2.25rem;height:2.25rem;margin:0 auto var(--s7);color:var(--ottone-400)}
 .citazione blockquote{
   margin:0;font-family:var(--font-display);font-weight:400;
-  font-size:clamp(1.875rem,1.25rem + 2.4vw,3.25rem);line-height:var(--interlinea-stretta);
+  font-size:clamp(1.75rem,1.2rem + 2vw,3rem);line-height:var(--interlinea-stretta);
 }
-.citazione blockquote p{max-width:none;margin:0}
+.citazione blockquote p{max-width:none;margin:0;text-wrap:balance}
 .citazione figcaption{
   margin-top:var(--s7);color:var(--ottone-400);
 }
@@ -679,7 +679,9 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   background:var(--verde-800);color:#fff;
   padding-block:var(--spazio-sezione);
   background-image:radial-gradient(78% 90% at 90% 4%,rgba(27,148,123,.28),transparent 60%);
+  min-height:560px;display:flex;align-items:center;
 }
+.pagina-testata>.contenitore{width:100%}
 .pagina-testata p{color:var(--verde-200);font-size:var(--t-lead);line-height:var(--interlinea-media);margin:var(--s6) 0 0}
 .briciole{color:var(--verde-300);margin-bottom:var(--s6)}
 .briciole a{text-decoration:none}
@@ -833,7 +835,7 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .hero__contenuto{padding-block:var(--s8)}
   .hero h1{font-size:clamp(2rem,10vh,3rem);margin-bottom:var(--s4)}
   .hero .azioni{margin-top:var(--s6)}
-  .pagina-testata{padding-block:var(--s9)}
+  .pagina-testata{padding-block:var(--s9);min-height:480px}
 }
 
 /* --- Hover solo con mouse ---------------------------------------------------
@@ -851,7 +853,7 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .testata__nav a:hover{color:var(--ottone-400)}
   .testata__nav .testata__tel:hover{border-radius:var(--foglia-inversa);background:var(--ottone-500);color:var(--verde-950)}
   .entrypoint__carta:hover{border-radius:var(--foglia-inversa)}
-  .entrypoint__carta:hover::after{background:linear-gradient(180deg,rgba(4,26,21,.08) 0%,rgba(4,26,21,.08) 30%,rgba(4,26,21,.52) 55%,rgba(4,26,21,.80) 80%,rgba(4,26,21,.88) 100%)}
+  .entrypoint__carta:hover::after{background:linear-gradient(180deg,rgba(4,26,21,.05) 0%,rgba(4,26,21,.08) 40%,rgba(4,26,21,.45) 62%,rgba(4,26,21,.7) 82%,rgba(4,26,21,.82) 100%)}
   a.indice__voce:hover .indice__vai{background:var(--ottone-500);border-color:var(--ottone-500);color:var(--verde-950)}
   a.indice__voce:hover{padding-left:var(--s6);background:var(--sabbia)}
   a.indice__voce:hover .indice__anelli{transform:scale(1.12)}
@@ -888,4 +890,20 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .testata,.pie,.fascia-cta,.menu-toggle{display:none}
   body{color:#000;background:#fff}
   [data-reveal],.scaglionato>*{opacity:1 !important;transform:none !important}
+}
+
+/* Galleria a tutta larghezza: righe con altezza uguale, foto 1:1, 5:4, 16:9 */
+.galleria-fascia{display:flex;flex-direction:column;gap:var(--s3);padding-inline:var(--s3);margin-top:var(--s8)}
+.galleria-fascia__riga{display:flex;gap:var(--s3)}
+.galleria-fascia figure{margin:0;flex:var(--g) 1 0;aspect-ratio:var(--r);min-width:0;overflow:hidden;border-radius:var(--foglia);transition:border-radius 560ms var(--ease-organico)}
+.galleria-fascia img{width:100%;height:100%;object-fit:cover;filter:saturate(.94);transition:filter 620ms var(--ease)}
+@media (max-width:39.99em){
+  .galleria-fascia,.galleria-fascia__riga{gap:var(--s2)}
+  .galleria-fascia{padding-inline:var(--s2)}
+  .galleria-fascia__riga{flex-wrap:wrap}
+  .galleria-fascia figure[style*="16/9"]{flex-basis:100%}
+}
+@media (hover:hover){
+  .galleria-fascia figure:hover{border-radius:var(--foglia-inversa)}
+  .galleria-fascia figure:hover img{filter:saturate(1.06)}
 }
