@@ -83,6 +83,22 @@
 (function () {
   var moduli = document.querySelectorAll('[data-form-contatto]');
   Array.prototype.forEach.call(moduli, function (form) {
+    // Allegati: limite di numero e peso, segnalato con la validazione nativa.
+    Array.prototype.forEach.call(form.querySelectorAll('input[type="file"][data-max-file]'), function (campo) {
+      campo.addEventListener('change', function () {
+        var maxFile = parseInt(campo.getAttribute('data-max-file'), 10);
+        var maxByte = parseFloat(campo.getAttribute('data-max-mb')) * 1024 * 1024;
+        var troppoPesanti = Array.prototype.some.call(campo.files, function (f) { return f.size > maxByte; });
+        if (campo.files.length > maxFile) {
+          campo.setCustomValidity('Puoi allegare al massimo ' + maxFile + ' foto.');
+        } else if (troppoPesanti) {
+          campo.setCustomValidity('Ogni foto deve pesare al massimo ' + campo.getAttribute('data-max-mb') + ' MB.');
+        } else {
+          campo.setCustomValidity('');
+        }
+        if (campo.validationMessage) campo.reportValidity();
+      });
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {

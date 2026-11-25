@@ -603,6 +603,14 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
 }
 .campo textarea{min-height:10rem;resize:vertical}
 .campo__aiuto{font-size:var(--t-xs);color:var(--grigio)}
+.campo__facoltativo{font-weight:400;color:var(--grigio)}
+.campo input[type="file"]{border-style:dashed;border-color:var(--verde-300);font-size:var(--t-sm);color:var(--grigio);cursor:pointer}
+.campo input[type="file"]::file-selector-button{
+  font:inherit;font-weight:600;color:var(--inchiostro);cursor:pointer;
+  margin-right:var(--s4);padding:var(--s2) var(--s4);
+  border:1px solid var(--verde-300);border-radius:var(--r-minimo);background:var(--verde-050);
+  transition:border-color var(--transizione),background-color var(--transizione);
+}
 .privacy{display:flex;gap:var(--s4);align-items:flex-start;grid-column:1/-1;font-size:var(--t-sm)}
 .privacy input{min-height:auto;width:20px;height:20px;margin-top:.3em;flex:none;accent-color:var(--ottone-500)}
 .form__invio{grid-column:1/-1;margin-top:var(--s2)}
@@ -865,6 +873,7 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .galleria figure:hover img{filter:saturate(1.06)}
   .forma-quadrifoglio figure:hover img{filter:saturate(1.06)}
   .campo input:hover,.campo textarea:hover,.campo select:hover{border-color:var(--verde-300)}
+  .campo input[type="file"]:hover::file-selector-button{border-color:var(--verde-500)}
   .contatti__blocco a:hover{color:var(--ottone-600)}
   .pie a:hover{color:var(--ottone-400)}
   .briciole a:hover{color:var(--ottone-400)}
@@ -902,6 +911,7 @@ a.indice__voce{grid-template-columns:auto 1fr auto}
   .galleria-fascia{padding-inline:var(--s2)}
   .galleria-fascia__riga{flex-wrap:wrap}
   .galleria-fascia figure[style*="16/9"]{flex-basis:100%}
+  .galleria-fascia--quattro figure{flex:1 1 calc(50% - var(--s2));aspect-ratio:4/5}
 }
 @media (hover:hover){
   .galleria-fascia figure:hover{border-radius:var(--foglia-inversa)}
